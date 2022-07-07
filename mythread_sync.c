@@ -16,7 +16,6 @@ int main()
     int i;
     //add함수 부분
     sem_init(&ter,0,1);
-    
     for(i=0;i<THREAD_NUM;i++)
         if(pthread_create(&tid[i],  NULL, add, NULL)){
             printf("error pthread_create\n");
